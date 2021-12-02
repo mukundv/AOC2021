@@ -77,4 +77,4 @@ Both parts of this puzzle are complete! They provide two gold stars: **
 At this point, you should [return to your Advent calendar](https://adventofcode.com/2021) and try another puzzle.
 
 If you still want to see it, you
-can [get your puzzle input](https://github.com/mukundv/AOC2021/blob/master/day2_input.txt).
+can [get your puzzle input](https://github.com/mukundv/AOC2021/blob/master/day2/day2_input.txt).
