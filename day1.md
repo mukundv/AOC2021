@@ -88,3 +88,6 @@ Consider sums of a three-measurement sliding window. How many sums are larger th
 **Your puzzle answer was 1418.**
 
 Both parts of this puzzle are complete! They provide two gold stars: **
+
+If you still want to see
+it, [you can get your puzzle input](https://github.com/mukundv/AOC2021/blob/master/day1_input.txt).
