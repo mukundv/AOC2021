@@ -22,8 +22,3 @@ Fun with Python :snake: - [aoc 2021](https://adventofcode.com/2021/)
   * [Input](https://github.com/mukundv/AOC2021/blob/master/day4/day4_input.txt)
   * [Code](https://github.com/mukundv/AOC2021/blob/master/day4/day4.py)
   * [tag](https://github.com/mukundv/AOC2021/releases/tag/day04)
-* #### Day 5 - Hydrothermal Venture
-  * [Puzzle](https://github.com/mukundv/AOC2021/blob/master/day5/day5.md)
-  * [Input](https://github.com/mukundv/AOC2021/blob/master/day5/day5_input.txt)
-  * [Code](https://github.com/mukundv/AOC2021/blob/master/day5/day5.py)
-  * [tag](https://github.com/mukundv/AOC2021/releases/tag/day05)
