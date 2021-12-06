@@ -1,10 +1,6 @@
-# each lanternfish creates a new lanternfish once every 7 days
-# a new lanternfish - two more days for its first cycle.
-# A lanternfish that creates a new fish resets its timer to 6
-# new lanternfish starts with an internal timer of 8
-# Each day 0 becomes a 6 and adds a new 8 to the end of the list
-# each other number decreases by 1
 import numpy as np
+
+from utils import profile
 
 
 def get_list(input_file_name):
@@ -15,6 +11,7 @@ def get_list(input_file_name):
 
 
 # This method works for 80 days and does not scale for 256 days
+@profile
 def get_total_fish(aoc_input, days):
     for day in range(days):
         aoc_input_copy = []
@@ -29,6 +26,7 @@ def get_total_fish(aoc_input, days):
 
 
 # np.roll is awesome. Saves inserting, deleting, shifting
+@profile
 def part2(aoc_input, days):
     np_array = np.zeros(9, dtype=int)  # Get a 1D array of 0's
     for x in aoc_input:
