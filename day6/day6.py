@@ -1,6 +1,6 @@
 import numpy as np
 
-from utils import profile
+from utils import timeit
 
 
 def get_list(input_file_name):
@@ -11,8 +11,9 @@ def get_list(input_file_name):
 
 
 # This method works for 80 days and does not scale for 256 days
-@profile
+@timeit
 def get_total_fish(aoc_input, days):
+    aoc_input_copy = []
     for day in range(days):
         aoc_input_copy = []
         for timer in aoc_input:
@@ -26,15 +27,15 @@ def get_total_fish(aoc_input, days):
 
 
 # np.roll is awesome. Saves inserting, deleting, shifting
-@profile
+@timeit
 def part2(aoc_input, days):
-    np_array = np.zeros(9, dtype=int)  # Get a 1D array of 0's
+    np_array = np.zeros(9, dtype=np.float64)  # Get a 1D array of 0's
     for x in aoc_input:
         np_array[x] += 1  # Count the timers
     for day in range(days):
         np_array = np.roll(np_array, -1)
         np_array[6] += np_array[8]
-    return np.sum(np_array)
+    return int(np.sum(np_array))
 
 
 if __name__ == '__main__':
