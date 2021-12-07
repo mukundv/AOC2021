@@ -32,3 +32,8 @@ Fun with Python :snake: - [aoc 2021](https://adventofcode.com/2021/)
   * [Input](https://github.com/mukundv/AOC2021/blob/master/day6/day6_input.txt)
   * [Code](https://github.com/mukundv/AOC2021/blob/master/day6/day6.py)
   * [tag](https://github.com/mukundv/AOC2021/releases/tag/day06)
+* #### Day 7 - The Treachery of Whales
+  * [Puzzle](https://github.com/mukundv/AOC2021/blob/master/day7/day7.md)
+  * [Input](https://github.com/mukundv/AOC2021/blob/master/day7/day7_input.txt)
+  * [Code](https://github.com/mukundv/AOC2021/blob/master/day7/day7.py)
+  * [tag](https://github.com/mukundv/AOC2021/releases/tag/day07)
