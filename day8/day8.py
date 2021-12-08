@@ -11,6 +11,7 @@ def get_lists(input_file_name):
         outputs.append(line.split(' | ')[1].replace('\n', ''))
     return patterns, outputs
 
+
 @timeit
 def get_test(input_file_name):
     with open(input_file_name) as f:
@@ -33,6 +34,7 @@ def part1(outputs):
     for i in interested_lengths:
         count += len(sizes[sizes == i])
     return count
+
 
 @timeit
 def part2(input_file_name):
@@ -82,4 +84,4 @@ if __name__ == '__main__':
     # fetch_and_save('2021', '8')
     print(f'Part1: {part1(get_lists("day8_input.txt")[1])}')
     print(f'Part2: {part2("day8_input.txt")}')
-    generate_readme("README", '2021','8')
+    generate_readme("README", '2021', '8', '../')

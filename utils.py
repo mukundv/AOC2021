@@ -75,7 +75,7 @@ def get_table_body(year, upto):
     return body
 
 
-def generate_readme(name, year, day):
+def generate_readme(name, year, day, dir):
     readme = snakemd.Document(name)
     readme.add_header("AOC 2021")
     readme.add_paragraph("Fun with Python :snake: - aoc 2021") \
@@ -84,7 +84,7 @@ def generate_readme(name, year, day):
     readme.add_element(snakemd.Table(header=header, body=get_table_body(year, day)))
     now = datetime.today().strftime('%d-%m-%Y %H:%M:%S')
     readme.add_paragraph(f"This document was automatically rendered on {now}")
-    readme.output_page()
+    readme.output_page(dump_dir=dir)
 
 
 ## AOC UTILS
