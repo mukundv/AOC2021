@@ -65,7 +65,7 @@ def get_table_body(year, upto):
     body = []
     for i in range(1, int(upto) + 1):
         puzzle = snakemd.InlineText(fetch_puzzle_name(year, i), url=f"{base_url}blob/master/day{i}/day{i}.md")
-        aoc_input = snakemd.InlineText(f"day{i}.md", url=f"{base_url}blob/master/day{i}/day{i}_input.txt")
+        aoc_input = snakemd.InlineText(f"day{i}_input.txt", url=f"{base_url}blob/master/day{i}/day{i}_input.txt")
         solution = snakemd.InlineText(f"day{i}.py", url=f"{base_url}blob/master/day{i}/day{i}.py")
         if int(upto) <= 9:
             tag = snakemd.InlineText(f"day0{i}", url=f"{base_url}releases/tag/day0{i}")
