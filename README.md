@@ -11,5 +11,6 @@ Fun with Python :snake: - [aoc 2021](https://adventofcode.com/2021/)
 | [Hydrothermal Venture](https://github.com/mukundv/AOC2021/blob/master/day5/day5.md)    | [day5.md](https://github.com/mukundv/AOC2021/blob/master/day5/day5_input.txt) | [day5.py](https://github.com/mukundv/AOC2021/blob/master/day5/day5.py) | [day05](https://github.com/mukundv/AOC2021/releases/tag/day05) |
 | [Lanternfish](https://github.com/mukundv/AOC2021/blob/master/day6/day6.md)             | [day6.md](https://github.com/mukundv/AOC2021/blob/master/day6/day6_input.txt) | [day6.py](https://github.com/mukundv/AOC2021/blob/master/day6/day6.py) | [day06](https://github.com/mukundv/AOC2021/releases/tag/day06) |
 | [The Treachery of Whales](https://github.com/mukundv/AOC2021/blob/master/day7/day7.md) | [day7.md](https://github.com/mukundv/AOC2021/blob/master/day7/day7_input.txt) | [day7.py](https://github.com/mukundv/AOC2021/blob/master/day7/day7.py) | [day07](https://github.com/mukundv/AOC2021/releases/tag/day07) |
+| [Seven Segment Search](https://github.com/mukundv/AOC2021/blob/master/day8/day8.md)    | [day8.md](https://github.com/mukundv/AOC2021/blob/master/day8/day8_input.txt) | [day8.py](https://github.com/mukundv/AOC2021/blob/master/day8/day8.py) | [day08](https://github.com/mukundv/AOC2021/releases/tag/day08) |
 
-This document was automatically rendered on 08-12-2021 14:08:41
+This document was automatically rendered on 09-12-2021 00:23:28
