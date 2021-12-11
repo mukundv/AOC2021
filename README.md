@@ -14,5 +14,6 @@ Fun with Python :snake: - [aoc 2021](https://adventofcode.com/2021/)
 | [Seven Segment Search](https://github.com/mukundv/AOC2021/blob/master/day8/day8.md)    | [day8_input.txt](https://github.com/mukundv/AOC2021/blob/master/day8/day8_input.txt)    | [day8.py](https://github.com/mukundv/AOC2021/blob/master/day8/day8.py)    | [day8](https://github.com/mukundv/AOC2021/releases/tag/day8)   |
 | [Smoke Basin](https://github.com/mukundv/AOC2021/blob/master/day9/day9.md)             | [day9_input.txt](https://github.com/mukundv/AOC2021/blob/master/day9/day9_input.txt)    | [day9.py](https://github.com/mukundv/AOC2021/blob/master/day9/day9.py)    | [day9](https://github.com/mukundv/AOC2021/releases/tag/day9)   |
 | [Syntax Scoring](https://github.com/mukundv/AOC2021/blob/master/day10/day10.md)        | [day10_input.txt](https://github.com/mukundv/AOC2021/blob/master/day10/day10_input.txt) | [day10.py](https://github.com/mukundv/AOC2021/blob/master/day10/day10.py) | [day10](https://github.com/mukundv/AOC2021/releases/tag/day10) |
+| [Dumbo Octopus](https://github.com/mukundv/AOC2021/blob/master/day11/day11.md)         | [day11_input.txt](https://github.com/mukundv/AOC2021/blob/master/day11/day11_input.txt) | [day11.py](https://github.com/mukundv/AOC2021/blob/master/day11/day11.py) | [day11](https://github.com/mukundv/AOC2021/releases/tag/day11) |
 
-This document was automatically rendered on 11-12-2021 17:34:48
+This document was automatically rendered on 12-12-2021 06:57:51
