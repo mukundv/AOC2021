@@ -80,7 +80,7 @@ def generate_readme(name, year, day, dir):
     readme.add_header("AOC 2021")
     readme.add_paragraph("Fun with Python :snake: - aoc 2021") \
         .insert_link("aoc 2021", "https://adventofcode.com/2021/")
-    header = ["Day", "PuzzleInput", "Solution", "Tag"]
+    header = ["Day", "Puzzle Input", "Solution", "Tag"]
     readme.add_element(snakemd.Table(header=header, body=get_table_body(year, day)))
     now = datetime.today().strftime('%d-%m-%Y %H:%M:%S')
     readme.add_paragraph(f"This document was automatically rendered on {now}")
