@@ -76,8 +76,8 @@ def read_readme(directory, year):
         return readme_table
 
 
-def get_puzzle_name(year, day):
-    return read_readme("", year).get((str(year), day))
+def get_puzzle_name(directory, year, day):
+    return read_readme(directory, year).get((str(year), day))
 
 
 def fetch_puzzle_name(year, day):
@@ -87,11 +87,11 @@ def fetch_puzzle_name(year, day):
             1].strip()[:-4]
 
 
-def get_table_body(year, upto):
+def get_table_body(year, upto, directory):
     base_url = "https://github.com/mukundv/AOC2021/"
     body = []
     for i in range(1, int(upto) + 1):
-        name = get_puzzle_name(year, i)
+        name = get_puzzle_name(directory, year, i)
         if name:
             puzzle = snakemd.InlineText(name, url=f"{base_url}blob/master/day{i}/day{i}.md")
         else:
@@ -112,7 +112,7 @@ def generate_readme(name, year, day, directory):
     readme.add_paragraph("Fun with Python :snake: - aoc 2021") \
         .insert_link("aoc 2021", "https://adventofcode.com/2021/")
     header = ["Day", "Puzzle Input", "Solution", "Tag"]
-    readme.add_element(snakemd.Table(header=header, body=get_table_body(year, day)))
+    readme.add_element(snakemd.Table(header=header, body=get_table_body(year, day, directory)))
     now = datetime.today().strftime('%d-%m-%Y %H:%M:%S')
     readme.add_paragraph(f"This document was automatically rendered on {now}")
     readme.output_page(dump_dir=directory)
