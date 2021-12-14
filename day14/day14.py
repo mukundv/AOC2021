@@ -1,51 +1,67 @@
-from collections import defaultdict
+from collections import Counter
 
-pairs = []
+from utils import timeit, generate_readme
 
 
 def get_inputs(input_file_name):
-    rules = []
-    for i, value in enumerate(open(input_file_name).read().splitlines()):
-        if i == 0:
-            polymer_template = value
-        elif value:
-            rules.append(value)
-    return rules, polymer_template
+    with open(input_file_name, 'r') as f:
+        lines = f.readlines()
+    return lines
 
 
-def get_pairs(rules):
-    for line in rules:
-        pairs.append(line.split(' -> '))
-    return pairs
+def run(lines, times):
+    rules = get_rules(lines)
+    state = get_state(lines)
+    for _ in range(times):
+        new_state = Counter()
+        for pair, count in state.items():
+            for match in rules[pair]:
+                new_state[match] += count
+        state = new_state
+    counts = get_counts(lines)
+    update_counts(counts, state)
+    return get_final_value(counts)
 
 
-def get_counts(polymer):
-    element_count = defaultdict(int)
-    pair_count = defaultdict(int)
-
-    for i in range(len(polymer) - 1):
-        element_count[polymer[i]] += 1
-        pair_count[polymer[i:i + 2]] += 1
-    element_count[polymer[-1]] += 1
-
-    return element_count, pair_count
+def get_final_value(counts):
+    return (max(counts.values()) - min(counts.values())) // 2
 
 
-def insert_polymer_pairs(pair_count, element_count,pair):
-    for pair, count in pair_count.copy().items():
-        pair_count[pair] -= count
-        # # add = pairs[pair]
-        # element_count[add] += count
-        # pair_count[pair[0] + add] += count
-        # pair_count[add + pair[1]] += count
+def update_counts(counts, state):
+    for pair, count in state.items():
+        for c in pair:
+            counts[c] += count
 
 
-def run(rules, polymer_template, part):
-    p = get_pairs(rules)
-    element_count, pair_count = get_counts(polymer_template)
-    for i in range(10):
-        insert_polymer_pairs(pair_count, element_count)
+def get_counts(lines):
+    counts = Counter(lines[0][0] + lines[0].rstrip()[-1])
+    return counts
+
+
+def get_state(lines):
+    state = Counter(a + b for a, b in zip(lines[0], lines[0][1:].rstrip()))
+    return state
+
+
+def get_rules(lines):
+    rules = {
+        line[:2]: (line[0] + line[-1], line[-1] + line[1])
+        for line in map(str.strip, lines[2:])
+    }
+    return rules
+
+
+@timeit
+def part1(lines):
+    return run(lines, 10)
+
+
+@timeit
+def part2(lines):
+    return run(lines, 40)
 
 
 if __name__ == '__main__':
-    get_inputs("day14_example.txt")
+    print(f'part1: {part1(get_inputs("day14_input.txt"))}')
+    print(f'part2: {part2(get_inputs("day14_input.txt"))}')
+    generate_readme("README", '2021', '14', '../')
