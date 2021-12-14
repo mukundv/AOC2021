@@ -1,35 +1,13 @@
 import numpy as np
 
-
-def get_inputs(input_file_name):
-    instructions = []
-    dots = []
-    for line in open(input_file_name).read().strip().splitlines():
-        if line[:1] == 'f':
-            line = line.replace('fold along ', '')
-            instructions.append([line.split('=')[0], line.split('=')[1]])
-        else:
-            if len(line) > 0:
-                dots.append(line)
-    return dots, instructions
+from utils import generate_readme
 
 
-def find_max(array):
-    x = []
-    y = []
-    for line in array:
-        x.append(int(line.split(',')[0]))
-        y.append(int(line.split(',')[1]))
-    return [max(x), max(y)]
-
-
-def get_paper(dots):
-    array_size = find_max(dots)
-    paper = np.zeros((array_size[1] + 1, array_size[0] + 1), dtype=int)
-    for line in dots:
-        x, y = line.split(',')
-        paper[int(y), int(x)] = 1
-    return paper
+def get_inputs(path):
+    with open(path) as f:
+        inputs = f.read()
+        dots, instructions = inputs.split("\n\n")
+    return [[int(i) for i in i.strip().split(",") if i != ""] for i in dots.split("\n")], instructions.split("\n")
 
 
 def fold(paper, instructions):
@@ -47,17 +25,45 @@ def fold(paper, instructions):
         return np.minimum(1, left_paper + np.fliplr(right_paper))
 
 
-def part1(paper, instructions):
-    return fold(paper, instructions).sum()
+def fold_y(paper, coord):
+    copy = np.zeros((coord, paper.shape[1]))
+    dist = paper.shape[0] - coord - 1
+    copy[-dist:, :] = paper[coord - dist:coord, :] + np.flipud(paper[coord + 1:, :])
+    copy[:-dist, :] = paper[:coord - dist, :]
+    return np.minimum(1, copy)
 
 
-def part2(paper, instructions):
-    for i, j in instructions:
-        matrix = fold(paper, [i, j])
-    print(matrix)
+def fold_x(paper, coord):
+    copy = np.zeros((paper.shape[0], coord))
+    dist = paper.shape[1] - coord - 1
+    copy[:, -dist:] = paper[:, coord - dist:coord] + np.fliplr(paper[:, coord + 1:])
+    copy[:, :-dist] = paper[:, :coord - dist]
+    return np.minimum(1, copy)
+
+
+def part1(input_file_name):
+    dots, instructions = get_inputs(input_file_name)
+    dots = np.array(dots)
+    paper = np.zeros((dots[:, 1].max() + 1, dots[:, 0].max() + 1))
+    paper[dots[:, 1], dots[:, 0]] = 1
+    for i, instruction in enumerate(instructions):
+        val = instruction.split(" ")[-1]
+        axis, coord = val.split("=")
+        coord = int(coord)
+        if i == 0:
+            print(int(paper.sum()))
+
+        if axis == 'x':
+            paper = fold_x(paper, coord)
+        else:
+            paper = fold_y(paper, coord)
+
+    paper = np.char.mod('%d', paper)
+    x = ["".join(paper[i, :]) for i in range(paper.shape[0])]
+    print("\n".join(x).replace("1", "#").replace("0", " "))
+    print(x)
 
 
 if __name__ == '__main__':
-    print(f'Part1: {part1(get_paper(get_inputs("day13_input.txt")[0]), get_inputs("day13_input.txt")[1][0])}')
-    print(f'Part2: {part2(get_paper(get_inputs("day13_input.txt")[0]), get_inputs("day13_input.txt")[1])}')
-    # print((get_inputs("day13_example.txt")))
+    print(f'Part1: {part1("day13_input.txt")}')
+    generate_readme("README", '2021', '13', '../')

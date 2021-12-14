@@ -16,5 +16,6 @@ Fun with Python :snake: - [aoc 2021](https://adventofcode.com/2021/)
 | [Syntax Scoring](https://github.com/mukundv/AOC2021/blob/master/day10/day10.md)        | [day10_input.txt](https://github.com/mukundv/AOC2021/blob/master/day10/day10_input.txt) | [day10.py](https://github.com/mukundv/AOC2021/blob/master/day10/day10.py) | [day10](https://github.com/mukundv/AOC2021/releases/tag/day10) |
 | [Dumbo Octopus](https://github.com/mukundv/AOC2021/blob/master/day11/day11.md)         | [day11_input.txt](https://github.com/mukundv/AOC2021/blob/master/day11/day11_input.txt) | [day11.py](https://github.com/mukundv/AOC2021/blob/master/day11/day11.py) | [day11](https://github.com/mukundv/AOC2021/releases/tag/day11) |
 | [Passage Pathing](https://github.com/mukundv/AOC2021/blob/master/day12/day12.md)       | [day12_input.txt](https://github.com/mukundv/AOC2021/blob/master/day12/day12_input.txt) | [day12.py](https://github.com/mukundv/AOC2021/blob/master/day12/day12.py) | [day12](https://github.com/mukundv/AOC2021/releases/tag/day12) |
+| [Transparent Origami](https://github.com/mukundv/AOC2021/blob/master/day13/day13.md)   | [day13_input.txt](https://github.com/mukundv/AOC2021/blob/master/day13/day13_input.txt) | [day13.py](https://github.com/mukundv/AOC2021/blob/master/day13/day13.py) | [day13](https://github.com/mukundv/AOC2021/releases/tag/day13) |
 
-This document was automatically rendered on 13-12-2021 11:47:42
+This document was automatically rendered on 14-12-2021 18:05:23
