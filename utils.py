@@ -102,7 +102,7 @@ def get_table_body(year, upto, directory):
             tag = snakemd.InlineText(f"day0{i}", url=f"{base_url}releases/tag/day0{i}")
         else:
             tag = snakemd.InlineText(f"day{i}", url=f"{base_url}releases/tag/day{i}")
-        body.append([puzzle, aoc_input, solution, tag])
+        body.append([i, puzzle, aoc_input, solution, tag])
     return body
 
 
@@ -111,10 +111,10 @@ def generate_readme(name, year, day, directory):
     readme.add_header("AOC 2021")
     readme.add_paragraph("Fun with Python :snake: - aoc 2021") \
         .insert_link("aoc 2021", "https://adventofcode.com/2021/")
-    header = ["Day", "Puzzle Input", "Solution", "Tag"]
+    header = ["Day", "Puzzle", "Input", "Solution", "Tag"]
     readme.add_element(snakemd.Table(header=header, body=get_table_body(year, day, directory)))
     now = datetime.today().strftime('%d-%m-%Y %H:%M:%S')
-    readme.add_paragraph(f"This document was automatically rendered on {now}")
+    readme.add_paragraph(f"This document was automatically rendered on {now} using SnakeMD") \
+        .insert_link("SnakeMD", url="https://github.com/TheRenegadeCoder/SnakeMD")
     readme.output_page(dump_dir=directory)
     print(f'Readme Generated {directory}README.md')
-
