@@ -118,7 +118,3 @@ def generate_readme(name, year, day, directory):
     readme.output_page(dump_dir=directory)
     print(f'Readme Generated {directory}README.md')
 
-# if __name__ == '__main__':
-#     generate_readme("README", '2021', 12, "./")
-# request_content('2021','7','problem')
-# generate_readme("README", '2021', '7')
