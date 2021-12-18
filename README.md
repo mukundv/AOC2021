@@ -20,6 +20,6 @@ Fun with Python :snake: - [aoc 2021](https://adventofcode.com/2021/)
 | 14  | [Extended Polymerization](https://github.com/mukundv/AOC2021/blob/master/day14/day14.md) | [day14_input.txt](https://github.com/mukundv/AOC2021/blob/master/day14/day14_input.txt) | [day14.py](https://github.com/mukundv/AOC2021/blob/master/day14/day14.py) | [day14](https://github.com/mukundv/AOC2021/releases/tag/day14) |
 | 15  | [Chiton](https://github.com/mukundv/AOC2021/blob/master/day15/day15.md)                  | [day15_input.txt](https://github.com/mukundv/AOC2021/blob/master/day15/day15_input.txt) | [day15.py](https://github.com/mukundv/AOC2021/blob/master/day15/day15.py) | [day15](https://github.com/mukundv/AOC2021/releases/tag/day15) |
 | 16  | [Packet Decoder](https://github.com/mukundv/AOC2021/blob/master/day16/day16.md)          | [day16_input.txt](https://github.com/mukundv/AOC2021/blob/master/day16/day16_input.txt) | [day16.py](https://github.com/mukundv/AOC2021/blob/master/day16/day16.py) | [day16](https://github.com/mukundv/AOC2021/releases/tag/day16) |
+| 17  | [Trick Shot](https://github.com/mukundv/AOC2021/blob/master/day17/day17.md)              | [day17_input.txt](https://github.com/mukundv/AOC2021/blob/master/day17/day17_input.txt) | [day17.py](https://github.com/mukundv/AOC2021/blob/master/day17/day17.py) | [day17](https://github.com/mukundv/AOC2021/releases/tag/day17) |
 
-This document was automatically rendered on 17-12-2021 11:44:21
-using [SnakeMD](https://github.com/TheRenegadeCoder/SnakeMD)
+This document was automatically rendered on 18-12-2021 16:54:43 using [SnakeMD](https://github.com/TheRenegadeCoder/SnakeMD)
