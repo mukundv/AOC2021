@@ -82,9 +82,11 @@ def get_puzzle_name(directory, year, day):
 
 def fetch_puzzle_name(year, day):
     url = f"https://adventofcode.com/{year}/day/{day}"
-    return \
-        BeautifulSoup(requests.get(url).text.strip(), "html.parser").article.contents[0].contents[0].strip().split(':')[
-            1].strip()[:-4]
+    ret = requests.get(url).text.strip()
+    x = BeautifulSoup(ret, "html.parser")
+    name = x.article.contents[0].contents[0]
+    name = name.strip().split(':')[1].strip()[:-4]
+    return name
 
 
 def get_table_body(year, upto, directory):
