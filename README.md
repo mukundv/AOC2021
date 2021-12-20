@@ -22,5 +22,7 @@ Fun with Python :snake: - [aoc 2021](https://adventofcode.com/2021/)
 | 16  | [Packet Decoder](https://github.com/mukundv/AOC2021/blob/master/day16/day16.md)          | [day16_input.txt](https://github.com/mukundv/AOC2021/blob/master/day16/day16_input.txt) | [day16.py](https://github.com/mukundv/AOC2021/blob/master/day16/day16.py) | [day16](https://github.com/mukundv/AOC2021/releases/tag/day16) |
 | 17  | [Trick Shot](https://github.com/mukundv/AOC2021/blob/master/day17/day17.md)              | [day17_input.txt](https://github.com/mukundv/AOC2021/blob/master/day17/day17_input.txt) | [day17.py](https://github.com/mukundv/AOC2021/blob/master/day17/day17.py) | [day17](https://github.com/mukundv/AOC2021/releases/tag/day17) |
 | 18  | [Snailfish](https://github.com/mukundv/AOC2021/blob/master/day18/day18.md)               | [day18_input.txt](https://github.com/mukundv/AOC2021/blob/master/day18/day18_input.txt) | [day18.py](https://github.com/mukundv/AOC2021/blob/master/day18/day18.py) | [day18](https://github.com/mukundv/AOC2021/releases/tag/day18) |
+| 19  | [Beacon Scanner](https://github.com/mukundv/AOC2021/blob/master/day19/day19.md)          | [day19_input.txt](https://github.com/mukundv/AOC2021/blob/master/day19/day19_input.txt) | [day19.py](https://github.com/mukundv/AOC2021/blob/master/day19/day19.py) | [day19](https://github.com/mukundv/AOC2021/releases/tag/day19) |
 
-This document was automatically rendered on 20-12-2021 07:21:42 using [SnakeMD](https://github.com/TheRenegadeCoder/SnakeMD)
+This document was automatically rendered on 20-12-2021 21:12:56
+using [SnakeMD](https://github.com/TheRenegadeCoder/SnakeMD)
