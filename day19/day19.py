@@ -34,7 +34,7 @@ def get_scanners(data: str) -> list[list[tuple[int, ...]]]:
 
 
 def align(aligned: list, candidate: list) -> tuple[list[tuple[Any, Any, Any]], list[Any]] | None:
-    global c
+    # global c
     return_list: list[list[Any]] = []
     dl = []
     dp = dpp = None
