@@ -1,8 +1,20 @@
-def get_list():
+import os
+
+from aocd import get_data
+from dotenv import load_dotenv
+
+
+def get_session() -> str:
+    load_dotenv()
+    return os.getenv('SESSION_COOKIE')
+
+
+def get_list(data=None, day=None, year=None):
     aoc_input = []
-    with open("day1_input.txt", "r") as f:
-        while line := f.readline().rstrip():
-            aoc_input.append(int(line))
+    if not data:
+        aoc_input = [int(i) for i in get_data(get_session(), day=day, year=year).split('\n')]
+    else:
+        aoc_input = [int(i) for i in data.split('\n')]
     return aoc_input
 
 
@@ -30,5 +42,5 @@ def sliding_window(input_list):
 
 
 if __name__ == '__main__':
-    print(f'greater = {compare_list(get_list())}')
+    print(f'greater = {compare_list(get_list(data=None, day=1, year=2021))}')
     print(f'sliding window = {compare_list(sliding_window(get_list()))}')
