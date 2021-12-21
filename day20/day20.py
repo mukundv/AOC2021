@@ -1,18 +1,20 @@
+import os
 from typing import Any, Tuple
 
 import numpy as np
 from aocd import get_data
-from numpy import ndarray
 from dotenv import load_dotenv
-import os
+from numpy import ndarray
+
 from utils import timeit, generate_readme
+
 
 def get_session() -> str:
     load_dotenv()
     return os.getenv('SESSION_COOKIE')
 
 
-def get_inputs(day: int, year: int, data: str = None) -> tuple[ndarray, ndarray]:
+def get_inputs(day: int, year: int, data: str = None) -> Tuple[ndarray, ndarray]:
     if data is None:
         data = get_data(get_session(), day=day, year=year)
     data = data.replace("#", "1").replace(".", "0")
@@ -49,9 +51,11 @@ def get_codes(stride, stride_cols, stride_rows):
     codes: int | Any = stride[:, :, 0] * 256 + np.packbits(stride[:, :, 1:]).reshape(stride_rows, stride_cols)
     return codes
 
+
 @timeit
 def part1(algo, img):
     return np.sum(enhance_image(algo=algo, img=img, times=2))
+
 
 @timeit
 def part2(algo, img):
