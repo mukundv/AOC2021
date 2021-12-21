@@ -1,7 +1,19 @@
-def get_list(input_file_name):
-    with open(input_file_name, "r") as f:
-        aoc_input = [line.rstrip() for line in f]
-    # print(aoc_input)
+import os
+
+from aocd import get_data
+from dotenv import load_dotenv
+
+
+def get_session() -> str:
+    load_dotenv()
+    return os.getenv('SESSION_COOKIE')
+
+
+def get_list(data=None, day=None, year=None):
+    if not data:
+        aoc_input = [line.rstrip() for line in get_data(get_session(), day=day, year=year).split('\n')]
+    else:
+        aoc_input = [line.rstrip() for line in data.splitlines()]
     return aoc_input
 
 
@@ -17,8 +29,6 @@ def get_power_consumption(input_list):
         else:
             gamma += '1'
             epsilon += '0'
-    # print( f'Gamma = {int(gamma, 2)}, Epsilon = {int(epsilon, 2)}, Power Consumption = {int(gamma,
-    # 2) * int(epsilon, 2)}')
     return int(gamma, 2) * int(epsilon, 2)
 
 
@@ -44,15 +54,13 @@ def get_num(input_list, type_of_gas):
         req_numbers = [row for row in input_list_copy if row[i] == bit]
 
         if len(req_numbers) == 1:  # Keep going until we have one
-            # print(f'{type_of_gas} = {int(req_numbers[0], 2)}')
             return int(req_numbers[0], 2)
         else:
             input_list_copy = req_numbers
 
 
 if __name__ == '__main__':
-    print(f'Part 1: Power consumption: {get_power_consumption(get_list("day3_input.txt"))}')
+    print(f'Part 1: Power consumption: {get_power_consumption(get_list(data=None, day=3, year=2021))}')
     print(
-        f'Part 2: Life support rating = {get_num(get_list("day3_input.txt"), "o2") * get_num(get_list("day3_input.txt"), "co2")}')
-
-    # print(f'Part 2: Life Support Rating: {get_life_support_rating(get_list("day3_input.txt"))}')
+        f'Part 2: Life support rating = \
+{get_num(get_list(data=None, day=3, year=2021), "o2") * get_num(get_list(data=None, day=3, year=2021), "co2")}')

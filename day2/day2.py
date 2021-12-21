@@ -57,5 +57,5 @@ def get_aim(input_list):
 
 
 if __name__ == '__main__':
-    print(f'Part 1: Horizontal Position * depth = {compare_list(get_list("day2_input.txt"))}')
-    print(f'Part 2: Horizontal Position * depth = {get_aim(get_list("day2_input.txt"))}')
+    print(f'Part 1: Horizontal Position * depth = {compare_list(get_list(data=None, day=2, year=2021))}')
+    print(f'Part 2: Horizontal Position * depth = {get_aim(get_list(data=None, day=2, year=2021))}')

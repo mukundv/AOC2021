@@ -1,14 +1,30 @@
 import inspect
+import os
+
+from aocd import get_data
+from dotenv import load_dotenv
 
 
-def get_lists(input_file_name):
-    with open(input_file_name, 'r') as f:
-        line = f.read().split('\n\n')
-        draw_numbers = [int(x) for x in line[0].split(',')]
-        boards = [[[int(n) for n in r.split()]
-                   for r in line[i].strip('\n').split('\n')]
-                  for i in range(1, len(line))]
-        return draw_numbers, boards
+def get_session() -> str:
+    load_dotenv()
+    return os.getenv('SESSION_COOKIE')
+
+
+def get_lists(data=None, day=None, year=None):
+    if not data:
+        draw_numbers, boards = get_draw_numbers_boards(get_data(get_session(), day=day, year=year))
+    else:
+        draw_numbers, boards = get_draw_numbers_boards(data)
+    return draw_numbers, boards
+
+
+def get_draw_numbers_boards(data):
+    line = data.split('\n\n')
+    draw_numbers = [int(x) for x in line[0].split(',')]
+    boards = [[[int(n) for n in r.split()]
+               for r in line[i].strip('\n').split('\n')]
+              for i in range(1, len(line))]
+    return draw_numbers, boards
 
 
 # Part 1
@@ -24,9 +40,6 @@ def get_winning_number(draw_numbers, boards):
                 if all(i == 0 for i in y):
                     score_sum = sum(x for j in board for x in j if x > 0)  # Sum up all the numbers in the
                     # board (5X5) that are > 0
-                    print(f'{function_name}: Score Sum is {score_sum}')
-                    print(
-                        f'{function_name}: Final Score = Score Sum ({score_sum}) * Number ({number}) = {score_sum * number}')
                     return score_sum * number  # Winning Number is score * number that completed the
 
 
@@ -48,22 +61,16 @@ def get_last_winning_board_score(draw_numbers, boards):
                 if all(k == 0 for k in column):
                     if x == win:
                         score_sum = sum(i for r in board for i in r if i > 0)
-                        print(f'{function_name}:  Score Sum is {score_sum}')
-                        print(
-                            f'{function_name}:  Score Sum ({score_sum}) * Number ({number}) = {score_sum * number}')
                         return score_sum * number
                     winning_board.append(board)
             for board_row in board:
                 if all(b == 0 for b in board_row):
                     if x == win:
                         score_sum = sum(i for j in board for i in j if i > 0)
-                        print(f'{function_name}: Score Sum is {score_sum}')
-                        print(
-                            f'{function_name}: Score Sum ({score_sum}) * Number ({number}) = {score_sum * number}')
                         return score_sum * number
                     winning_board.append(board)
 
 
 if __name__ == '__main__':
-    print(f'Part 1: Winning Number: {get_winning_number(*get_lists("day4_input.txt"))}')
-    print(f'Part 2: Winning Number: {get_last_winning_board_score(*get_lists("day4_input.txt"))}')
+    print(f'Part 1: Winning Number: {get_winning_number(*get_lists(data=None, day=4, year=2021))}')
+    print(f'Part 2: Winning Number: {get_last_winning_board_score(*get_lists(data=None, day=4, year=2021))}')

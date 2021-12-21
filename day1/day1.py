@@ -42,5 +42,5 @@ def sliding_window(input_list):
 
 
 if __name__ == '__main__':
-    print(f'greater = {compare_list(get_list(data=None, day=1, year=2021))}')
-    print(f'sliding window = {compare_list(sliding_window(get_list()))}')
+    print(f'Part 1: {compare_list(get_list(data=None, day=1, year=2021))}')
+    print(f'Part 2: {compare_list(sliding_window(get_list(data=None, day=1, year=2021)))}')
