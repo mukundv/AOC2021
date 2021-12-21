@@ -111,6 +111,12 @@ def get_table_body(year, upto, directory):
 def generate_readme(name, year, day, directory):
     readme = snakemd.Document(name)
     readme.add_header("AOC 2021")
+    readme.add_element(
+        snakemd.Paragraph(
+            [snakemd.InlineText("stars", url="https://img.shields.io/badge/stars%20⭐-42-yellow", image=True)]))
+    readme.add_element(
+        snakemd.Paragraph(
+            [snakemd.InlineText("days", url="https://img.shields.io/badge/days%20completed-21-red", image=True)]))
     readme.add_paragraph("Fun with Python :snake: - aoc 2021") \
         .insert_link("aoc 2021", "https://adventofcode.com/2021/")
     header = ["Day", "Puzzle", "Input", "Solution", "Tag"]
