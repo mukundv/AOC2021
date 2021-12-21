@@ -1,7 +1,20 @@
-def get_list(input_file_name):
+import os
+
+from aocd import get_data
+from dotenv import load_dotenv
+
+
+def get_session() -> str:
+    load_dotenv()
+    return os.getenv('SESSION_COOKIE')
+
+
+def get_list(data=None, day=None, year=None):
     aoc_input = []
-    with open(input_file_name, "r") as f:
-        aoc_input = [line.rstrip() for line in f]
+    if not data:
+        aoc_input = [line.rstrip() for line in get_data(get_session(), day=day, year=year).splitlines()]
+    else:
+        aoc_input = [line.rstrip() for line in data.splitlines()]
     return aoc_input
 
 
