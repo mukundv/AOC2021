@@ -1,12 +1,28 @@
-import numpy as np
+import os
 import re
 
+import numpy as np
+from aocd import get_data
+from dotenv import load_dotenv
 
-def get_list(input_file_name):
+
+def get_session() -> str:
+    load_dotenv()
+    return os.getenv('SESSION_COOKIE')
+
+
+def get_list(data=None, day=None, year=None):
+    if not data:
+        aoc_input = get_input(get_data(get_session(), day=day, year=year))
+    else:
+        aoc_input = get_input(data)
+    return aoc_input
+
+
+def get_input(data):
     aoc_input = []
-    for line in open(input_file_name).read().strip().splitlines():
-        s = re.findall(r'-?[0-9]+', line)  # should've done this in earlier puzzles.
-        n = [int(n) for n in s]
+    for line in data.strip().splitlines():
+        n = [int(n) for n in re.findall(r'-?[0-9]+', line)]
         aoc_input.append(n)
     return aoc_input
 
@@ -30,5 +46,5 @@ def build_range(x, y):
 
 
 if __name__ == '__main__':
-    print(f'Part 1: {get_overlap(get_list("day5_input.txt"), False)}')
-    print(f'Part 2: {get_overlap(get_list("day5_input.txt"), True)}')
+    print(f'Part 1: {get_overlap(get_list(data=None, day=5, year=2021), False)}')
+    print(f'Part 2: {get_overlap(get_list(data=None, day=5, year=2021), True)}')
