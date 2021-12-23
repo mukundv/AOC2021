@@ -65,7 +65,9 @@ def read_readme(directory, year):
         return None
     else:
         if not readme_table:
-            soup = BeautifulSoup(markdown.markdown(open(f"{directory}README.md").read()), "html.parser")
+            soup = BeautifulSoup(markdown.markdown(
+                open(f"{directory}README.md", "r", encoding='utf-8', errors="ignore"
+                     ).read()), "html.parser")
             a = soup.findAll('a')
             i = 1
             for row in (a[1:]):
@@ -113,7 +115,7 @@ def generate_readme(name, year, day, directory):
     readme.add_header("AOC 2021")
     readme.add_element(
         snakemd.Paragraph(
-            [snakemd.InlineText("stars", url="https://img.shields.io/badge/stars%20⭐-42-yellow", image=True)]))
+            [snakemd.InlineText("stars", url="https://img.shields.io/badge/stars%20-42-yellow", image=True)]))
     readme.add_element(
         snakemd.Paragraph(
             [snakemd.InlineText("days", url="https://img.shields.io/badge/days%20completed-21-red", image=True)]))

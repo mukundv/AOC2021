@@ -1,5 +1,8 @@
 # AOC 2021
-![](https://img.shields.io/badge/stars%20⭐-43-yellow) ![](https://img.shields.io/badge/days%20completed-21-red)
+
+![stars](https://img.shields.io/badge/stars%20-42-yellow)
+
+![days](https://img.shields.io/badge/days%20completed-21-red)
 
 Fun with Python :snake: - [aoc 2021](https://adventofcode.com/2021/)
 
@@ -26,5 +29,7 @@ Fun with Python :snake: - [aoc 2021](https://adventofcode.com/2021/)
 | 19  | [Beacon Scanner](https://github.com/mukundv/AOC2021/blob/master/day19/day19.md)          | [day19_input.txt](https://github.com/mukundv/AOC2021/blob/master/day19/day19_input.txt) | [day19.py](https://github.com/mukundv/AOC2021/blob/master/day19/day19.py) | [day19](https://github.com/mukundv/AOC2021/releases/tag/day19) |
 | 20  | [Trench Map](https://github.com/mukundv/AOC2021/blob/master/day20/day20.md)              | [day20_input.txt](https://github.com/mukundv/AOC2021/blob/master/day20/day20_input.txt) | [day20.py](https://github.com/mukundv/AOC2021/blob/master/day20/day20.py) | [day20](https://github.com/mukundv/AOC2021/releases/tag/day20) |
 | 21  | [Dirac Dice](https://github.com/mukundv/AOC2021/blob/master/day21/day21.md)              | [day21_input.txt](https://github.com/mukundv/AOC2021/blob/master/day21/day21_input.txt) | [day21.py](https://github.com/mukundv/AOC2021/blob/master/day21/day21.py) | [day21](https://github.com/mukundv/AOC2021/releases/tag/day21) |
+| 22  | [Reactor Reboot](https://github.com/mukundv/AOC2021/blob/master/day22/day22.md)          | [day22_input.txt](https://github.com/mukundv/AOC2021/blob/master/day22/day22_input.txt) | [day22.py](https://github.com/mukundv/AOC2021/blob/master/day22/day22.py) | [day22](https://github.com/mukundv/AOC2021/releases/tag/day22) |
 
-This document was automatically rendered on 21-12-2021 23:34:21 using [SnakeMD](https://github.com/TheRenegadeCoder/SnakeMD)
+This document was automatically rendered on 23-12-2021 16:05:31
+using [SnakeMD](https://github.com/TheRenegadeCoder/SnakeMD)
