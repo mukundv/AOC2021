@@ -1,8 +1,8 @@
 # AOC 2021
 
-![stars](https://img.shields.io/badge/stars%20-48-yellow)
+![stars](https://img.shields.io/badge/stars%20-42-yellow)
 
-![days](https://img.shields.io/badge/days%20completed-24-red)
+![days](https://img.shields.io/badge/days%20completed-21-red)
 
 Fun with Python :snake: - [aoc 2021](https://adventofcode.com/2021/)
 
@@ -32,5 +32,6 @@ Fun with Python :snake: - [aoc 2021](https://adventofcode.com/2021/)
 | 22  | [Reactor Reboot](https://github.com/mukundv/AOC2021/blob/master/day22/day22.md)          | [day22_input.txt](https://github.com/mukundv/AOC2021/blob/master/day22/day22_input.txt) | [day22.py](https://github.com/mukundv/AOC2021/blob/master/day22/day22.py) | [day22](https://github.com/mukundv/AOC2021/releases/tag/day22) |
 | 23  | [Amphipod](https://github.com/mukundv/AOC2021/blob/master/day23/day23.md)                | [day23_input.txt](https://github.com/mukundv/AOC2021/blob/master/day23/day23_input.txt) | [day23.py](https://github.com/mukundv/AOC2021/blob/master/day23/day23.py) | [day23](https://github.com/mukundv/AOC2021/releases/tag/day23) |
 | 24  | [Arithmetic Logic Unit](https://github.com/mukundv/AOC2021/blob/master/day24/day24.md)   | [day24_input.txt](https://github.com/mukundv/AOC2021/blob/master/day24/day24_input.txt) | [day24.py](https://github.com/mukundv/AOC2021/blob/master/day24/day24.py) | [day24](https://github.com/mukundv/AOC2021/releases/tag/day24) |
+| 25  | [Sea Cucumber](https://github.com/mukundv/AOC2021/blob/master/day25/day25.md)            | [day25_input.txt](https://github.com/mukundv/AOC2021/blob/master/day25/day25_input.txt) | [day25.py](https://github.com/mukundv/AOC2021/blob/master/day25/day25.py) | [day25](https://github.com/mukundv/AOC2021/releases/tag/day25) |
 
-This document was automatically rendered on 25-12-2021 14:55:44 using [SnakeMD](https://github.com/TheRenegadeCoder/SnakeMD)
+This document was automatically rendered on 25-12-2021 20:02:01 using [SnakeMD](https://github.com/TheRenegadeCoder/SnakeMD)
