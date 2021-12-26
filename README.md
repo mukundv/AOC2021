@@ -35,3 +35,5 @@ Fun with Python :snake: - [aoc 2021](https://adventofcode.com/2021/)
 | 25  | [Sea Cucumber](https://github.com/mukundv/AOC2021/blob/master/day25/day25.md)            | [day25_input.txt](https://github.com/mukundv/AOC2021/blob/master/day25/day25_input.txt) | [day25.py](https://github.com/mukundv/AOC2021/blob/master/day25/day25.py) | [day25](https://github.com/mukundv/AOC2021/releases/tag/day25) |
 
 This document was automatically rendered on 25-12-2021 20:02:01 using [SnakeMD](https://github.com/TheRenegadeCoder/SnakeMD)
+
+Go [here](https://github.com/mukundv/aoc) for previous years
