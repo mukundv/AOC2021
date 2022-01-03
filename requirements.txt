@@ -30,7 +30,7 @@ pytz-deprecation-shim==0.1.0.post0
 requests==2.27.0
 scipy==1.7.3
 six==1.16.0
-SnakeMD==0.9.3
+SnakeMD==0.10.0
 snowballstemmer==2.2.0
 soupsieve==2.3.1
 Sphinx==4.3.2
