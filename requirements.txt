@@ -16,7 +16,7 @@ lazy-object-proxy==1.7.1
 Markdown==3.3.6
 MarkupSafe==2.0.1
 mccabe==0.6.1
-numpy==1.22.0
+numpy==1.22.2
 packaging==21.3
 Pebble==4.6.3
 platformdirs==2.4.1
