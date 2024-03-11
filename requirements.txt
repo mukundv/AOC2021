@@ -23,7 +23,7 @@ Markdown==3.5.2
 MarkupSafe==2.1.5
 mccabe==0.7.0
 numpy==1.26.4
-packaging==23.2
+packaging==24.0
 Pebble==5.0.6
 pip-upgrader==1.4.15
 platformdirs==4.2.0
