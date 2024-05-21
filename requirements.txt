@@ -43,7 +43,7 @@ snakemd==2.2.0
 snowballstemmer==2.2.0
 soupsieve==2.5
 Sphinx==7.2.6
-sphinx-issues==4.0.0
+sphinx-issues==4.1.0
 sphinx-rtd-theme==2.0.0
 sphinxcontrib-applehelp==1.0.8
 sphinxcontrib-devhelp==1.0.6
