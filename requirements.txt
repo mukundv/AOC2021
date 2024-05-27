@@ -62,4 +62,4 @@ tzdata==2024.1
 tzlocal==5.2
 urllib3==2.2.1
 wrapt==1.16.0
-zipp==3.18.2
+zipp==3.19.0
