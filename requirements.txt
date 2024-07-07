@@ -22,7 +22,7 @@ lazy-object-proxy==1.10.0
 Markdown==3.6
 MarkupSafe==2.1.5
 mccabe==0.7.0
-numpy==2.0.0rc2
+numpy==2.0.0
 packaging==24.1
 Pebble==5.0.7
 pip-upgrader==1.4.15
