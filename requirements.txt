@@ -1,7 +1,7 @@
 advent-of-code-data==2.0.1
 alabaster==0.7.16
 aocd-example-parser==2023.12.17
-astroid==3.2.2
+astroid==3.2.3
 Babel==2.15.0
 beautifulsoup4==4.13.0b2
 certifi==2024.7.4
