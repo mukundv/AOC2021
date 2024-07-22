@@ -42,7 +42,7 @@ six==1.16.0
 snakemd==2.2.0
 snowballstemmer==2.2.0
 soupsieve==2.5
-Sphinx==7.3.7
+Sphinx==7.4.7
 sphinx-issues==4.1.0
 sphinx-rtd-theme==2.0.0
 sphinxcontrib-applehelp==1.0.8
